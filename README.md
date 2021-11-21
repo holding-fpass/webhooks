@@ -5,6 +5,12 @@ O recebimento de eventos por webhooks se dá pelo envio POST dos dados para uma 
 ## Autenticação
 Para que o evento seja devidamente validado quanto a sua origem, um token de autorização pré acordado entre as partes envolvidas (receptor e chamador) deverá ser enviado no header da requisição POST.
 
+```curl
+curl 'https://{webhookUrl}' \
+  -H 'authorization: b1c32c8e-27f7-438d-849c-35f4c54d35ca' \
+  ...
+```
+
 ## Resposta (Sucesso)
 Como resposta ao envio POST dos dados para URL uma resposta é enviada como confirmação do correto recebimento e validade da autorização requerida.
 
