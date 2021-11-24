@@ -68,7 +68,8 @@ Envio do evento é realizado por meio de um requisição POST feita para uma URL
 ```
 
 ### Response
-Como resposta ao envio da requisição é esperado uma evidencia do correto recebimento da mensagem através do status code 201 (Created) e corpo da resposta:
+Como resposta ao envio da requisição é esperado uma evidencia do correto recebimento da mensagem através do status code 201 (Created).
+Para evidenciar do o correto recebimento segue um exemplo possível do corpo da resposta:
 
 ```json
 {
