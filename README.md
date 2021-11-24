@@ -48,6 +48,7 @@ Envio do evento é realizado por meio de um requisição POST feita para uma URL
 * eventType: Tipo do evento gerado
 * resourceId: Identificação única da entidade no qual o evento gerado se refere
 * resourceType: Tipo da entidade
+* externalId: Identificação do usuário na plataforma destino
 * data: Dados adcionais (e opcionais) do evento gerado
 * timestamp: Data da geração do evento em formato ISO 8601
 
@@ -58,7 +59,7 @@ Envio do evento é realizado por meio de um requisição POST feita para uma URL
   "eventType": "live.reaction.created",
   "resourceId": "8dc6ef55-31ee-41a3-b224-ad480ed219ab",
   "resourceType": "live",
-  "externalId": "{userIdExterno}",
+  "externalId": "{string}",
   "data": {
     "emoji": "❤️"
   }
