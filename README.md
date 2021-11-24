@@ -11,6 +11,9 @@ curl 'https://{webhookUrl}' \
   ...
 ```
 
+## Incoming Webhooks
+Os eventos enviados para plataforma FPASS seguem a autenticação definida entre as partes e tem os seguintes resultados das chamadas para URL acordada:
+
 ## Resposta (Sucesso)
 Como resposta ao envio POST dos dados para URL uma resposta é enviada como confirmação do correto recebimento e validade da autorização requerida.
 
@@ -34,3 +37,33 @@ Em caso de falha no recebimento dos dado enviados uma resposta de falha é infor
   "delivered": false
 }
 ```
+
+## Outgoing Webhooks
+Os eventos enviados para plataformas externas seguem a autenticação (Header token por padrão: x-api-key: {uuid}) definida entre as partes e tem os seguintes modelos:
+
+### Request
+Envio do evento é realizado por meio de um requisição POST feita para uma URL pública e segura (HTTPS) contendo o seguinte corpo na requisição.
+
+#### Body
+```json
+{
+  "resourceId": "8dc6ef55-31ee-41a3-b224-ad480ed219ab",
+  "resourceType": "live.reaction.created",
+  "externalId": "{userIdExterno}",
+  "data": {
+    "emoji": "❤️"
+  }
+  "timestamp": "2021-01-01T10:30:05.000Z"
+}
+```
+
+### Response
+Como resposta ao envio da requisição é esperado uma evidencia do correto recebimento da mensagem através do status code 201 (Created) e corpo da resposta:
+
+```json
+{
+  "eventId": "8dc6ef55-31ee-41a3-b224-ad480ed219ab",
+  "timestamp": "2021-01-01T10:30:05.000Z"
+}
+```
+
