@@ -1,6 +1,6 @@
 # Webhooks
 
-O recebimento de eventos por webhooks se dá pelo envio POST dos dados para uma determinada URL informada. Todas tentativas são logadas e processadas posteriormente.
+O recebimento/envio de eventos por webhooks se dá pelo envio POST dos dados para uma determinada URL informada. Todas tentativas são logadas e processadas posteriormente.
 
 ## Autenticação
 Para que o evento seja devidamente validado quanto a sua origem, um token de autorização pré acordado entre as partes envolvidas (receptor e chamador) deverá ser enviado no header da requisição POST.
