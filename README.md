@@ -39,7 +39,7 @@ Em caso de falha no recebimento dos dado enviados uma resposta de falha é infor
 ```
 
 ## Outgoing Webhooks
-Os eventos enviados para plataformas externas seguem a autenticação (Header token por padrão: x-api-key: {uuid}) definida entre as partes e tem os seguintes modelos:
+Os eventos enviados para plataformas externas seguem a autenticação (Header de Autorização padrão: authorization: {token}) definida entre as partes e tem os seguintes modelos:
 
 ### Request
 Envio do evento é realizado por meio de um requisição POST feita para uma URL pública e segura (HTTPS) contendo o seguinte corpo na requisição.
