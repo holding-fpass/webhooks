@@ -44,11 +44,20 @@ Os eventos enviados para plataformas externas seguem a autenticação (Header to
 ### Request
 Envio do evento é realizado por meio de um requisição POST feita para uma URL pública e segura (HTTPS) contendo o seguinte corpo na requisição.
 
+* eventId: Identificação única do evento gerado
+* eventType: Tipo do evento gerado
+* resourceId: Identificação única da entidade no qual o evento gerado se refere
+* resourceType: Tipo da entidade
+* data: Dados adcionais (e opcionais) do evento gerado
+* timestamp: Data da geração do evento em formato ISO 8601
+
 #### Body
 ```json
 {
+  "eventId": "c1b55ffa-b3ee-4266-817e-567630e1dac3",
+  "eventType": "live.reaction.created",
   "resourceId": "8dc6ef55-31ee-41a3-b224-ad480ed219ab",
-  "resourceType": "live.reaction.created",
+  "resourceType": "live",
   "externalId": "{userIdExterno}",
   "data": {
     "emoji": "❤️"
